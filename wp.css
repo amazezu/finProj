@@ -1,0 +1,71 @@
+body{
+    background-image: url("my.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+.container{
+    margin-top: 100px;
+}
+.col-sm-3{
+    background-image: url("2r5w.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.7)
+}
+form{
+    margin-left: -50px;
+    margin-right: -50px;
+    padding: 50px;
+}
+#noe{
+    background-image: url("m.gif");
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 3px;
+    box-shadow: 8px 10px #88888888;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.button{
+    background-color: whitesmoke;
+    box-shadow: 5px 8px #888888;
+    transform: translateY(5px);
+}
+.button:hover{
+    background-color:rgba(0, 0, 0, 0.2);
+}
+#ok{
+    text-align: center;
+    margin-top:-30px;
+    color: rgba(0, 0, 0, 0.2);
+}
+#ok1{
+    text-align: center;
+    margin-top:-40px;
+    color: rgba(0, 0, 0, 0.4);
+}
+label{
+    color: rgb(0, 0, 0);
+}
+.form-control.f1{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    border-bottom-width: 1px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }

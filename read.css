@@ -1,0 +1,8 @@
+.page-header{
+    margin-top: 10px;
+    padding: 20px;
+}
+.toChange span{
+    font-size: 5px;
+    float:right !important;
+}
