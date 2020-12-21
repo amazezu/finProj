@@ -9,7 +9,8 @@
 </head>
 <body>
 <?php
-    $con = mysqli_connect("localhost:3307","root","","finalproj");
+    $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+    //$con = mysqli_connect("localhost:3307","root","","finalproj");
     $content = "";
     if (!$con) {
         die("Connection failed: " . mysqli_connect_error());

@@ -12,7 +12,8 @@
 $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-danger'>Go Back Page</a>";
     $reslt="";
     if(isset($_POST['product_name'])&&isset($_POST['price'])){
-        $con=mysqli_connect("localhost:3307","root","","finalproj");
+        $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+        //$con=mysqli_connect("localhost:3307","root","","finalproj");
         if (!$con) {
             die("Connection failed: " . mysqli_connect_error());
         }

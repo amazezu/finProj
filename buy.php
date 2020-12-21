@@ -9,7 +9,8 @@
 </head>
 <body>
 <?php
-	$con = mysqli_connect("localhost:3307","root","","finalproj");
+$con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+	//$con = mysqli_connect("localhost:3307","root","","finalproj");
     $goBack = "<a href='read.php?user_id=".$_GET['user_id']."' class='btn btn-danger'>Back</a>";
     if(isset($_POST['phone'])){
         if (!$con) {

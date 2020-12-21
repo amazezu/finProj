@@ -11,7 +11,8 @@
 <?php
     $msg = "";
     if(isset($_POST['reg']) && isset($_POST['mEmail']) && isset($_POST['mPass'])){
-        $con = mysqli_connect("localhost:3307","root","","finalproj");
+        $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+        //$con = mysqli_connect("localhost:3307","root","","finalproj");
         if(!$con){
             die("Connection failed: ".mysqli_connect_error());
         }

@@ -1,5 +1,6 @@
 <?php
-	$con = mysqli_connect("localhost:3307","root","","mysocmed");
+$con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+	//$con = mysqli_connect("localhost:3307","root","","mysocmed");
 	$result = mysqli_query($con, "SELECT * FROM post");
 	$content = "";
 	while($row = mysqli_fetch_assoc($result)){
