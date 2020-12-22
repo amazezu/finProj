@@ -23,9 +23,10 @@
             $msg = "Username Already Taken";
         }
         else{
-            $query = "INSERT INTO user (id,username,password)
-                    VALUES (NULL,'".$_POST['mEmail']."','".md5($_POST['mPass'])."')";
-            $res_u = mysqli_query($con, $query);
+            //$query = "INSERT INTO user (id,username,password)
+              //      VALUES (NULL,'".$_POST['mEmail']."','".md5($_POST['mPass'])."')";
+            $res_u = mysqli_query($con,"INSERT INTO user (id,username,password)
+                 VALUES (NULL,'".$_POST['mEmail']."','".md5($_POST['mPass'])."')");//$query);
             $msg = "Successful!";
         }
     }
