@@ -9,17 +9,16 @@
 </head>
 <body>
 <?php
- $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
- $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-danger'>Go Back Page</a>";
- if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-    $reslt="";
-   // if(isset($_POST['product_name']) && isset($_POST['price'])){    
+        $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+        $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-danger'>Go Back Page</a>";
+        if (!$con) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+    if(isset($_POST['product_name'])){    
         //$con=mysqli_connect("localhost:3307","root","","finalproj";
         $result=mysqli_query($con,"INSERT INTO prod VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");
         header("Location: read.php?user_id=" .$_POST['user_id']);
-    //}
+    }
 ?>
     <form method="post" action="create_product.php">
         <div class="container">
