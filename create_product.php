@@ -9,16 +9,18 @@
 </head>
 <body>
 <?php
-$createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-danger'>Go Back Page</a>";
+ $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+ $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-danger'>Go Back Page</a>";
     $reslt="";
-    if(isset($_POST['product_name'])&&isset($_POST['price'])){
-        $con = mysqli_connect("remotemysql.com","LOvxtTZhXq","FMPKDVKcJd","LOvxtTZhXq");
+    if(isset($_POST['product_name']) && isset($_POST['price'])){
+       
         //$con=mysqli_connect("localhost:3307","root","","finalproj");
         if (!$con) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        $result=mysqli_query($con,"INSERT INTO prod (id,user_id,product_name,price,date_at) VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");      
+        $result=mysqli_query($con,"INSERT INTO prod VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");
         header("Location: create_product.php?user_id=" .$_POST['user_id']);
+        $createAdd="<a href='read.php?user_id=". $_POST['user_id']."' class='btn btn-danger'>Go Back Page</a>";
     }
 ?>
     <form method="post" action="create_product.php">
@@ -37,11 +39,11 @@ $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-dang
                 <tbody>
                      <form method="post" action="create_product.php">
                         <tr>
+                            <input type="hidden" name="user_id" value=<?php echo $_GET['user_id'];?>>
                             <td><input type="text" name="product_name" class="form-control"></td>
                             <td><input type="text" name="price" class="form-control"></td> 
                         </tr>
                         <tr>
-                            <input type="hidden" name="user_id" value=<?php echo $_GET['user_id'];?>>
                             <?php echo $createAdd;?>
                             <input type="submit" value="Done" class="btn btn-dark">
                         </tr>
