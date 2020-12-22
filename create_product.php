@@ -17,7 +17,7 @@ $createAdd="<a href='read.php?user_id=". $_GET['user_id']."' class='btn btn-dang
         if (!$con) {
             die("Connection failed: " . mysqli_connect_error());
         }
-        $result=mysqli_query($con,"INSERT INTO prod VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");      
+        $result=mysqli_query($con,"INSERT INTO prod (id,user_id,product_name,price,date_at) VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");      
         header("Location: create_product.php?user_id=" .$_POST['user_id']);
     }
 ?>
