@@ -17,7 +17,7 @@
     $reslt="";
     if(isset($_POST['product_name']) && isset($_POST['price'])){    
         //$con=mysqli_connect("localhost:3307","root","","finalproj";
-        $result=mysqli_query($con,"INSERT INTO prod VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."',5,NULL)");
+        $result=mysqli_query($con,"INSERT INTO prod VALUES(NULL,".$_POST['user_id'].",'".$_POST['product_name']."','".$_POST['price']."',NULL)");
         header("Location: create_product.php?user_id=" .$_POST['user_id']);
         $createAdd="<a href='read.php?user_id=". $_POST['user_id']."' class='btn btn-danger'>Go Back Page</a>";
     }
